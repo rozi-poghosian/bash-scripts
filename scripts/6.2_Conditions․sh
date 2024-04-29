@@ -1,0 +1,15 @@
+#!/bin/bash
+
+VALUE=$(ip addr show | grep -v LOOPBACK | grep -ic mtu)
+
+if [ $VALUE -eq 1 ]
+then 
+	echo "You have only 1 Network Interface"
+elif [ $VALUE -gt 1 ]
+then
+	echo "You have multiple Network Interfaces"
+else 
+	echo "we haven't found any Network Interface"
+
+fi
+

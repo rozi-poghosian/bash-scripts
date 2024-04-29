@@ -1,0 +1,18 @@
+#!/bin/bash
+read -p 'Enter a number: ' NUM
+
+if [ $NUM -gt 150 ]
+then 
+	echo "Please wait, we are checking"
+	sleep 2
+	echo "your number is greater then 150"
+else
+       	echo "Please wait, we are checking"
+        sleep 2
+	echo "your number is less then 150"	
+fi
+
+echo
+echo "Thank You!"
+
+
