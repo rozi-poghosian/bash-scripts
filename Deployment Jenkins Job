@@ -1,0 +1,11 @@
+echo "------------------------------------- Build start -------------------------------------"
+pwd
+ls
+cd /docker
+ls
+rm -rf UnicornWP
+git clone https://github.com/rozi-poghosian/UnicornWP.git
+ls /docker/UnicornWP
+cd /docker/UnicornWP
+docker compose up -d
+echo "------------------------------------- Build finish -------------------------------------"
