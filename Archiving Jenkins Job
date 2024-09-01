@@ -1,0 +1,17 @@
+pwd
+echo "-----------------------------------------------------------------------------------------"
+DATE=$(date '+%d-%b-%Y_%H:%M')
+cd /backups/UnicornWP_V1
+echo "-----------------------------------------------------------------------------------------"
+ls mysql
+echo "-----------------------------------------------------------------------------------------"
+#tar czf /backups/UnicornWP_V1/mysql/$DATE.tar.gz /docker/UnicornWP/docker/mysql
+tar czf /backups/UnicornWP_V1/mysql/${DATE}.tar.gz /docker/UnicornWP/docker/mysql
+ls mysql
+#git config --global --add safe.directory /backups/UnicornWP_V1
+git status
+git add .
+git commit -m "Adding archive file"
+#git config --global user.name "rozi-poghosian"
+#git config --global user.email "rozi.poghosian@gmail.com"
+git push origin main
